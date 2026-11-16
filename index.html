@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ESO Plan · Clarity, Confidence, Predictability</title>
+<meta name="description" content="A simple ESO plan: close competitors, one SWOT, website fixes, social upgrade, and clear scope.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF7F4;--card:#FFFFFF;--ink:#15131A;--muted:#5F5A66;--line:#EADFD8;--orange:#FF601F;--deep:#C2410C;--peach:#FFB38A;--soft:#FFF1EA;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F0E13;--card:#17151C;--ink:#F4EFEA;--muted:#A8A1AD;--line:#2A2630;--deep:#FF7A3D;--soft:#221A17}}
+:root[data-theme="dark"]{--bg:#0F0E13;--card:#17151C;--ink:#F4EFEA;--muted:#A8A1AD;--line:#2A2630;--deep:#FF7A3D;--soft:#221A17}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:"Space Grotesk",Inter,system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em;margin:0}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+.kicker{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--deep)}
+.bar{width:0;height:4px;border-radius:2px;background:var(--orange);margin:.6rem 0 1.2rem;transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.bar.in{width:52px}
+.lead{color:var(--muted);max-width:620px}
+.note{font-size:.86rem;color:var(--muted);margin-top:.8rem}
+.btn{display:inline-flex;margin-top:1.4rem;padding:.8rem 1.25rem;border-radius:999px;background:var(--orange);color:#15131A;font-weight:600;text-decoration:none;box-shadow:0 10px 24px rgba(255,96,31,.3);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+
+.hero{position:relative;overflow:hidden;padding:5rem 1.25rem 4.5rem;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:-20%;pointer-events:none;background:radial-gradient(circle at 74% 42%,rgba(255,96,31,.22),transparent 42%),radial-gradient(circle at 12% 85%,rgba(255,179,138,.28),transparent 40%);animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(3%,-2%,0) scale(1.06)}}
+.hero-grid{position:relative;max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1fr;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:700;margin:.7rem 0 .4rem}
+.shine{background:linear-gradient(100deg,var(--orange) 0%,var(--peach) 45%,var(--orange) 90%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{from{background-position:0 0}to{background-position:-250% 0}}
+
+
+.marquee{overflow:hidden;background:#15131A;color:#FBF7F4}
+.track{display:flex;width:max-content;padding:.95rem 0;white-space:nowrap;font:600 1rem "Space Grotesk",sans-serif;animation:slide 28s linear infinite}
+.track span{padding-right:2.2rem}
+.track span::after{content:" •";color:var(--orange)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:4rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:0 0 .3rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+table{width:100%;border-collapse:collapse;min-width:600px;font-size:.95rem}
+th,td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.76rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+tbody tr{transition:background .25s}
+tbody tr:hover{background:var(--soft)}
+tr:last-child td{border-bottom:0}
+.pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:var(--soft);color:var(--deep);font-size:.8rem;font-weight:600}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.box{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.25rem 1.3rem;transition:transform .3s,box-shadow .3s}
+.box::before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:var(--orange);transition:width .7s ease}
+.box.in::before{width:100%}
+.box:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(21,19,26,.08)}
+.box h3{font-size:1.05rem;margin:0 0 .5rem}
+.box ul{margin:0;padding:0;list-style:none}
+.box li{position:relative;padding-left:1.4rem;margin:.4rem 0}
+.box li::before{content:"✔";position:absolute;left:0;top:0;color:var(--orange);font-weight:700}
+.box.no li::before{content:"✖";color:var(--muted)}
+.banner{position:relative;overflow:hidden;margin-top:1.2rem;padding:1.3rem 1.4rem;border-radius:16px;background:var(--soft);border-left:4px solid var(--orange)}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);transform:translateX(-100%);animation:sweep 4.5s ease-in-out infinite;pointer-events:none}
+@keyframes sweep{to{transform:translateX(100%)}}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
+.chips span{padding:.45rem .85rem;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:.92rem}
+.chips span b{color:var(--orange)}
+footer{padding:2.5rem 0 3.5rem}
+footer p{margin:0 0 .5rem}
+
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.bar{width:52px}.box.reveal::before{width:100%}}
+@media print{.marquee{display:none}.reveal{opacity:1!important;transform:none!important}.banner::after{display:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker">Elite Site Optimizer · Growth plan</div>
+      <h1>Our plan to become the <span class="shine">best choice</span> in our market.</h1>
+      <div class="bar"></div>
+      <p class="lead">A simple view of the competition, one SWOT, the website fixes, the social upgrade, and exactly what is in and out of scope.</p>
+      <p class="note">Prepared by Jaya Harini Kamalasekaran, SEO Manager</p>
+      <a class="btn" href="#competitors">See the plan →</a>
+    </div>
+    
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Competitors</span><span>One SWOT</span><span>Website fixes</span><span>Social upgrade</span><span>Clear scope</span><span>Predictable delivery</span>
+  <span>Competitors</span><span>One SWOT</span><span>Website fixes</span><span>Social upgrade</span><span>Clear scope</span><span>Predictable delivery</span>
+</div></div>
+
+<section id="competitors"><div class="wrap">
+  <div class="kicker">1 · Competitors</div>
+  <h2 class="reveal">Who we compete with</h2>
+  <div class="bar"></div>
+  <p class="lead reveal">These are close competitors of our size. We don’t need to beat the big suites. We need to be clearer and faster for our buyers.</p>
+  <div class="scroll reveal" style="margin-top:1.4rem"><table>
+    <thead><tr><th>Competitor</th><th>What they offer</th><th>Free start</th><th>Where we win</th></tr></thead>
+    <tbody>
+      <tr><td><b>Nuwtonic</b><br><span class="note">India</span></td><td>AI SEO that audits, fixes, and publishes automatically</td><td><span class="pill">Free trial · from $39/mo</span></td><td>We check accessibility and let you approve each fix before it goes live</td></tr>
+      <tr><td><b>Equally AI</b></td><td>AI accessibility fixes for small businesses</td><td><span class="pill">Free trial · from $45/mo</span></td><td>We also cover SEO and AI search visibility, not only accessibility</td></tr>
+      <tr><td><b>Site Audit Score</b></td><td>Free site audit with 18 checks</td><td><span class="pill">Free, no signup</span></td><td>Our audit leads to approved fixes and a trial, not just a report</td></tr>
+      <tr><td><b>Gushwork</b><br><span class="note">India</span></td><td>Done-for-you AI search leads</td><td><span class="pill">No trial · from $900/mo</span></td><td>Self-serve with a 14-day trial and no card, so buyers try before they pay</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note reveal">Origins and prices come from directory listings and can change. We confirm them before any external use.</p>
+</div></section>
+
+<section id="swot"><div class="wrap">
+  <div class="kicker">2 · SWOT</div>
+  <h2 class="reveal">Our SWOT on one page</h2>
+  <div class="bar"></div>
+  <div class="grid">
+    <div class="box reveal"><h3>Strengths</h3><ul>
+      <li>One tool for SEO, accessibility, and AI search visibility</li>
+      <li>Fixes you review and approve before they go live</li>
+      <li>Free audit in about a minute, plus a 14-day trial with no card</li>
+    </ul></div>
+    <div class="box reveal" style="--d:.1s"><h3>Weaknesses</h3><ul>
+      <li>Few public reviews and case studies</li>
+      <li>Visible website errors that look unfinished (section 3)</li>
+      <li>Pricing and platform details are not the same everywhere</li>
+    </ul></div>
+    <div class="box reveal" style="--d:.2s"><h3>Opportunities</h3><ul>
+      <li>More businesses need help showing up in AI search</li>
+      <li>Accessibility rules are getting stricter in the EU and US public sector</li>
+      <li>Agencies want tools they can offer under their own brand</li>
+    </ul></div>
+    <div class="box reveal" style="--d:.3s"><h3>Threats</h3><ul>
+      <li>Big suites are adding AI visibility features</li>
+      <li>Cheap single-purpose tools compete on price</li>
+      <li>One bad automatic fix could damage trust</li>
+    </ul></div>
+  </div>
+  <div class="banner reveal">
+    <b>So we can do this.</b>
+    <div class="chips">
+      <span><b>1</b> Fix the website basics</span>
+      <span><b>2</b> Prove results with reviews and case studies</span>
+      <span><b>3</b> Run one demo-to-trial process every client follows</span>
+    </div>
+    <p>Together, that makes us the best choice for our buyers.</p>
+  </div>
+</div></section>
+
+<section id="website"><div class="wrap">
+  <div class="kicker">3 · Website</div>
+  <h2 class="reveal">Website errors we will fix</h2>
+  <div class="bar"></div>
+  <p class="lead reveal">Each fix is small. Together they make ESO look finished and trustworthy.</p>
+  <div class="scroll reveal" style="margin-top:1.4rem"><table>
+    <thead><tr><th>What we see</th><th>Why it matters</th><th>The fix</th></tr></thead>
+    <tbody>
+      <tr><td>Four main headings on the homepage (should be one)</td><td>Confuses visitors and search engines</td><td>One clear main headline</td></tr>
+      <tr><td>Page title starts with “Home -”</td><td>Wastes the most valuable words in search results</td><td>A title that says what ESO does</td></tr>
+      <tr><td>FAQ answers include internal drafting notes</td><td>Looks unfinished to buyers</td><td>Rewrite as final customer answers</td></tr>
+      <tr><td>The reports answer is vague</td><td>Buyers can’t tell what they will receive</td><td>State formats, schedules, and plans</td></tr>
+      <tr><td>Platform list differs between pages</td><td>Lowers trust</td><td>One verified list used everywhere</td></tr>
+      <tr><td>API status differs (site vs. GetApp listing)</td><td>Developers may leave</td><td>Update the listing and the site</td></tr>
+      <tr><td>Pricing is not visible on the homepage</td><td>Visitors leave without a price signal</td><td>Add a “plans start at” line with a link</td></tr>
+      <tr><td>Company details differ across directories</td><td>Confuses search and AI tools</td><td>One profile with the same facts everywhere</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="social"><div class="wrap">
+  <div class="kicker">4 · Social media</div>
+  <h2 class="reveal">Social upgrade, compared with competitors</h2>
+  <div class="bar"></div>
+  <p class="lead reveal">We match what works for close competitors, then add proof from our own customers.</p>
+  <div class="scroll reveal" style="margin-top:1.4rem"><table>
+    <thead><tr><th>Channel</th><th>Today</th><th>What competitors do</th><th>Our upgrade</th></tr></thead>
+    <tbody>
+      <tr><td><b>LinkedIn</b></td><td>Company page is live</td><td>Gushwork has about 30,800 followers (snapshot) and focuses on AI search leads</td><td>3 posts a week: a demo clip, a before-and-after audit, and a client win (with permission)</td></tr>
+      <tr><td><b>Instagram</b></td><td>Page is live</td><td>Not benchmarked yet</td><td>One short visual explainer a week</td></tr>
+      <tr><td><b>X and Facebook</b></td><td>Pages are live</td><td>Not benchmarked yet</td><td>Repost LinkedIn content only</td></tr>
+      <tr><td><b>Paid ads</b></td><td>No active campaigns seen in our review</td><td>Gushwork runs paid campaigns for its clients</td><td>One small test on Google Search and LinkedIn, judged on cost per trial</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note reveal">We record ESO’s follower counts before any changes, so targets come from real numbers, not guesses.</p>
+</div></section>
+
+<section id="scope"><div class="wrap">
+  <div class="kicker">5 · Scope</div>
+  <h2 class="reveal">What is in this plan, and what is not</h2>
+  <div class="bar"></div>
+  <div class="grid">
+    <div class="box reveal"><h3>In this plan</h3><ul>
+      <li>Fix the 8 website errors in section 3</li>
+      <li>Set up tracking for free audits, trials, and demo requests</li>
+      <li>LinkedIn and Instagram upgrade: cadence and content</li>
+      <li>One small paid test, after budget approval</li>
+      <li>One demo script, one trial checklist, and follow-up messages</li>
+      <li>A weekly written update and a monthly competitor check</li>
+      <li>A final report and a proposal for the next phase</li>
+    </ul></div>
+    <div class="box no reveal" style="--d:.1s"><h3>Explicitly not in this plan (later phase)</h3><ul>
+      <li>New product features or new AI modules</li>
+      <li>Full website redesign beyond the fixes and content pages</li>
+      <li>Price changes or new plans</li>
+      <li>Paid ads at scale, beyond the test</li>
+      <li>X and Facebook growth campaigns</li>
+      <li>New integrations or API expansion</li>
+      <li>India-specific accessibility product (GIGW, IS 17802)</li>
+      <li>Languages other than English</li>
+      <li>Events, webinars, or podcasts</li>
+      <li>Team hiring or role changes</li>
+    </ul></div>
+  </div>
+  <p class="note reveal">Anything in the second list is a later phase. We confirm its time and cost in writing before we start it.</p>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="kicker">6 · How we work</div>
+  <h2 class="reveal">Predictable by design</h2>
+  <div class="bar"></div>
+  <div class="grid">
+    <div class="box reveal"><h3>One phase at a time</h3><p class="lead">Each phase is approved before the next one starts.</p></div>
+    <div class="box reveal" style="--d:.1s"><h3>Written updates</h3><p class="lead">A short update every week: what changed, what is next, and any risk.</p></div>
+    <div class="box reveal" style="--d:.2s"><h3>Clear change control</h3><p class="lead">New requests go to the scope list first, with time and cost confirmed in writing.</p></div>
+  </div>
+  <div class="banner reveal" style="margin-top:1.4rem">
+    <b>Before we start, we need three decisions from you:</b>
+    <p style="margin-top:.5rem">the test budget, one owner for demos and one for content, and scope sign-off.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p><b>Clarity:</b> one plan. <b>Confidence:</b> the fixes are already scoped. <b>Predictability:</b> approved phases and a weekly written update.</p>
+  <p class="note">Questions: harinikamal2000@gmail.com</p>
+</div></footer>
+
+<script>
+(() => {
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .15 });
+  document.querySelectorAll('.reveal, .bar').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
